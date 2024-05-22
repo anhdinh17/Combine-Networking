@@ -61,11 +61,11 @@
 				67FAA4AC2BFC378400CDA1D1 /* AppDelegate.swift */,
 				67FAA4AE2BFC378400CDA1D1 /* SceneDelegate.swift */,
 				67FAA4B02BFC378400CDA1D1 /* ViewController.swift */,
+				67FAA4C02BFC410800CDA1D1 /* NetworkingManager.swift */,
 				67FAA4B22BFC378400CDA1D1 /* Main.storyboard */,
 				67FAA4B52BFC378700CDA1D1 /* Assets.xcassets */,
 				67FAA4B72BFC378700CDA1D1 /* LaunchScreen.storyboard */,
 				67FAA4BA2BFC378700CDA1D1 /* Info.plist */,
-				67FAA4C02BFC410800CDA1D1 /* NetworkingManager.swift */,
 			);
 			path = "Combine Networking";
 			sourceTree = "<group>";
