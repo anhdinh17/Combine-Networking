@@ -26,6 +26,8 @@ class ViewController: UIViewController {
                 case .failure(let error):
                     if error as! NetworkingError == NetworkingError.invalidResponse {
                         print("Error of Invalid Response")
+                    } else {
+                        print(error.localizedDescription)
                     }
                 }
             } receiveValue: { usersArray in
