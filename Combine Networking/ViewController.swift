@@ -24,10 +24,18 @@ class ViewController: UIViewController {
                 case .finished:
                     print("Finished Publishing")
                 case .failure(let error):
-                    if error as! NetworkingError == NetworkingError.invalidResponse {
-                        print("Error of Invalid Response")
-                    } else {
+                    let networkError = error as? NetworkingError
+                    switch networkError {
+                    case .invalidURL:
+                        print("Invalid URL")
+                    case .invalidData:
+                        print("Invalid Data")
+                    case .invalidResponse:
+                        print("Invalid Response")
+                    case .unknown(let error):
                         print(error.localizedDescription)
+                    default:
+                        break
                     }
                 }
             } receiveValue: { usersArray in

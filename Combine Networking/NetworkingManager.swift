@@ -23,7 +23,7 @@ enum NetworkingError: Error {
     case invalidURL
     case invalidResponse
     case invalidData
-    case unknown
+    case unknown(error: Error)
     
     var errorDescription: String {
         switch self {
@@ -33,7 +33,7 @@ enum NetworkingError: Error {
             return "This is invalid RESPONSE ERROR."
         case .invalidData:
             return "This is INVALID DATA ERROR."
-        case .unknown:
+        case .unknown(let error):
             return "Sorry, we don't know this error lol."
         }
     }
